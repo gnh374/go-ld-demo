@@ -47,6 +47,7 @@ func Transfer(c *fiber.Ctx) error {
 	userContext := ldcontext.NewBuilder(id).
 	SetString("name", user.Name).
 	SetString("email", user.Email).
+	SetString("country", user.Country).
 	Build()
 
 	flagKey := "payment-flag"
