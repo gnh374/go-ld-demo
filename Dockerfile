@@ -4,13 +4,7 @@ FROM golang:1.23-alpine AS builder
 # Set environment variables
 ENV CGO_ENABLED=0 \
     GOOS=linux \
-    GOARCH=amd64 \
-    DB_HOST=109.106.253.187 \
-    DB_PORT=3306 \
-    DB_USER=u1275606_user_backend_ld_project \
-    DB_PASSWORD=LD_db1234! \
-    DB_NAME=u1275606_backend_ld_project \
-    SDK_LD=sdk-d4a84fa2-23f0-486b-af59-8985243ede13
+    GOARCH=amd64
 
 # Set working directory
 WORKDIR /app
