@@ -13,7 +13,7 @@ func main() {
 
 	// Enable CORS for all origins
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "*",  // Mengizinkan semua origin
+		AllowOrigins: "http://13.212.48.92:3000",  // Mengizinkan semua origin
 		AllowMethods: "GET,POST,PUT,DELETE,OPTIONS",  // Mengizinkan metode tertentu
 		AllowHeaders: "Content-Type, Authorization",  // Header yang diizinkan
 		AllowCredentials: true,  // Mengizinkan kredensial
