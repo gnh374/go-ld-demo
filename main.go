@@ -13,10 +13,12 @@ func main() {
 
 	// Enable CORS for all origins
 	app.Use(cors.New(cors.Config{
-		AllowOrigins: "*", // Mengizinkan semua origin
-		AllowMethods: "GET,POST,PUT,DELETE", // Mengizinkan metode HTTP tertentu
-		AllowHeaders: "Content-Type, Authorization", // Header yang diizinkan
+		AllowOrigins: "*",  // Mengizinkan semua origin
+		AllowMethods: "GET,POST,PUT,DELETE,OPTIONS",  // Mengizinkan metode tertentu
+		AllowHeaders: "Content-Type, Authorization",  // Header yang diizinkan
+		AllowCredentials: true,  // Mengizinkan kredensial
 	}))
+	
 
 	// Connect Database
 	database.ConnectDB()
