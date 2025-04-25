@@ -28,6 +28,8 @@ WORKDIR /root/
 # Copy the binary from the builder
 COPY --from=builder /app/main .
 
+COPY .env .
+
 # Expose application port
 EXPOSE 3000
 
